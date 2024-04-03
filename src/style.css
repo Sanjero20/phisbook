@@ -1,5 +1,6 @@
 :root {
   --background-color: #f0f2f5;
+  --primary: #0866ff;
 }
 
 * {
@@ -16,7 +17,7 @@ body {
 main {
   margin: 0 auto;
   height: 100vh;
-  width: 75%;
+  width: 72%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,6 +32,14 @@ footer {
 hr {
   border: 0;
   border-top: 1px solid lightgray;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* media query 1075px */
@@ -77,9 +86,9 @@ h2 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* forgot-password*/
 #login-form a {
-  color: #1877f2;
-  text-decoration: none;
+  color: var(--primary);
   text-align: center;
   font-size: smaller;
 }
@@ -91,12 +100,22 @@ input {
   border-radius: 0.35em;
 }
 
-input:hover {
-  /* change outline to blue-ish */
+input:focus {
+  outline: 0;
+  border-color: var(--primary);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+input::placeholder {
+  color: gray;
+}
+
+input:focus::placeholder {
+  color: lightgray;
 }
 
 #login-form button[type='submit'] {
-  background-color: #1877f2;
+  background-color: var(--primary);
   color: white;
   border: none;
   border-radius: 0.25em;
