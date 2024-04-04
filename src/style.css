@@ -19,9 +19,8 @@ main {
   height: 100vh;
   width: 72%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 2em;
 }
 
 footer {
@@ -52,24 +51,24 @@ a:hover {
   gap: 0;
 }
 
-/* ===========  Left side  ===========*/
+/** ===========  Left side  ===========*/
 .left {
   margin-top: 5em;
   gap: 0em;
 }
 
 #fb-logo {
-  margin-left: -25px;
+  margin-left: -30px;
   width: 325px;
 }
 
 h2 {
-  width: 80%;
-  font-size: 1.6em;
+  margin-top: -10px;
+  font-size: 1.75em;
   font-weight: 400;
 }
 
-/* ===========  Right side  ==========*/
+/** ===========  Right side  ==========*/
 .right {
   align-items: center;
   gap: 2em;
@@ -81,16 +80,18 @@ h2 {
   padding: 1em;
   border-radius: 0.5em;
   display: flex;
-  gap: 1em;
+  gap: 0.75em;
   flex-direction: column;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px;
 }
 
-/* forgot-password*/
+/* forgot password*/
 #login-form a {
   color: var(--primary);
   text-align: center;
-  font-size: smaller;
+  font-size: 0.9em;
+  margin: 0.5em 0;
 }
 
 input {
@@ -108,6 +109,7 @@ input:focus {
 
 input::placeholder {
   color: gray;
+  letter-spacing: 0.5px;
 }
 
 input:focus::placeholder {
@@ -115,11 +117,12 @@ input:focus::placeholder {
 }
 
 #login-form button[type='submit'] {
+  margin-top: 0.25em;
   background-color: var(--primary);
   color: white;
   border: none;
   border-radius: 0.25em;
-  padding: 0.5em;
+  padding: 0.65em;
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
@@ -130,18 +133,34 @@ input:focus::placeholder {
 }
 
 #login-form button[type='button'] {
-  margin: 0.5em auto;
+  margin: 0.75em auto;
   background-color: #42b72a;
   color: white;
   border: none;
   width: fit-content;
-  border-radius: 0.5em;
+  border-radius: 6px;
   padding: 1em;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
 .right > p {
   font-size: 0.9em;
+}
+
+/** Media Queries */
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: red;
+  }
 }
